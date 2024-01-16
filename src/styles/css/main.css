@@ -1,0 +1,406 @@
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+*::selection {
+  color: #fff;
+  background-color: #333;
+}
+body {
+  font-family: "futura-lt-w01-light", sans-serif;
+}
+html {
+  overflow: hidden;
+}
+/* Scroller */
+html::-webkit-scrollbar {
+  width: 0.3rem;
+}
+html::-webkit-scrollbar-track {
+  background: rgb(23, 60, 88, 0.85);
+}
+html::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+/* Overlay Layer */
+.layer {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(23, 60, 88, 0.85);
+  z-index: 2;
+}
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+/* Logo */
+.logo {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 5rem;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2rem 0.5rem 0.5rem;
+}
+.logo:hover {
+  background-color: rgb(23, 60, 88);
+}
+/* Centered Content */
+.text,
+.parts,
+.clockwise {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+}
+.text {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+.clock .text h2 {
+  color: #fff;
+  letter-spacing: 0.2em;
+  font-weight: 100;
+  font-size: 15px;
+}
+.clock .text h1 {
+  color: #fff;
+  line-height: 1.2em;
+  font-weight: 300;
+}
+/* Social */
+.social {
+  z-index: 4;
+}
+.social li {
+  list-style: none;
+}
+.social i {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.social i:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+/* Footer */
+.credit p {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: #fff;
+  z-index: 4;
+}
+.credit a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+}
+.credit a:hover {
+  text-decoration: underline;
+}
+/* Media Queries */
+@media (max-width: 500px) {
+  .logo {
+    left: 1rem;
+  }
+  .text {
+    width: 260px;
+    height: 200px;
+    line-height: 3.5rem;
+    margin-top: -100px;
+    margin-left: -130px;
+  }
+  .clock .text h2 {
+    font-size: 10px;
+  }
+  .clock .text h1 {
+    font-size: 40px;
+  }
+  .parts {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+  }
+  .clockwise {
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+  }
+  .social {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    margin-left: -116px;
+  }
+  .social ul {
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    column-gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+  .credit p {
+    left: 50%;
+    margin-left: -150.545px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .credit p a {
+    display: inline-block;
+  }
+}
+@media (min-width: 501px) and (max-width: 767px) {
+  .logo {
+    left: 1rem;
+  }
+  .text {
+    width: 300px;
+    height: 300px;
+    line-height: 3rem;
+    margin-top: -150px;
+    margin-left: -150px;
+  }
+  .clock .text h1 {
+    font-size: 60px;
+  }
+  .parts {
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+  }
+  .clockwise {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+  }
+  .social {
+    position: absolute;
+    bottom: 15%;
+    right: 50%;
+    left: 50%;
+    margin-left: -116px;
+  }
+  .social ul {
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    column-gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+  .social li {
+    display: inline-block;
+    width: 30px;
+    margin: 1rem;
+  }
+  .credit p {
+    left: 50%;
+    margin-left: -150.545px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .credit p a {
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo {
+    left: 1.5rem;
+  }
+  .text {
+    width: 300px;
+    height: 300px;
+    line-height: 5rem;
+    margin-top: -150px;
+    margin-left: -150px;
+  }
+  .clock .text h1 {
+    font-size: 70px;
+  }
+  .parts {
+    width: 500px;
+    height: 500px;
+    margin-top: -250px;
+    margin-left: -250px;
+  }
+  .clockwise {
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+  }
+  .social {
+    position: absolute;
+    bottom: 10%;
+    right: 50%;
+    left: 50%;
+    margin-left: -116px;
+  }
+  .social ul {
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    column-gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+  .credit p {
+    left: 50%;
+    margin-left: -150.545px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .logo {
+    left: 1.5rem;
+  }
+  .text {
+    width: 300px;
+    height: 300px;
+    line-height: 5rem;
+    margin-top: -150px;
+    margin-left: -150px;
+  }
+  .clock .text h1 {
+    font-size: 70px;
+  }
+  .parts {
+    width: 500px;
+    height: 500px;
+    margin-top: -250px;
+    margin-left: -250px;
+  }
+  .clockwise {
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+  }
+  .credit p {
+    left: 1.5rem;
+  }
+  .social {
+    position: fixed;
+    top: 50%;
+    margin-top: -112px;
+    right: 2rem;
+    z-index: 100;
+  }
+  .social li {
+    padding: 1rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .logo {
+    left: 2rem;
+  }
+  .text {
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+  }
+  .clock .text h1 {
+    font-size: 70px;
+  }
+  .clock .text h2 {
+    font-size: 15px;
+  }
+  .parts {
+    width: 600px;
+    height: 600px;
+    margin-top: -300px;
+    margin-left: -300px;
+  }
+  .clockwise {
+    width: 450px;
+    height: 450px;
+    margin-top: -225px;
+    margin-left: -225px;
+  }
+  .credit p {
+    left: 2rem;
+  }
+  .social {
+    position: fixed;
+    top: 50%;
+    margin-top: -112px;
+    right: 2rem;
+  }
+  .social li {
+    padding: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  .logo {
+    width: 70px;
+    height: 70px;
+    left: 4rem;
+  }
+  .text {
+    width: 500px;
+    height: 500px;
+    margin-top: -250px;
+    margin-left: -250px;
+  }
+  .clock .text h1 {
+    font-size: 84px;
+  }
+  .clock .text h2 {
+    font-size: 15px;
+  }
+  .parts {
+    width: 700px;
+    height: 700px;
+    margin-top: -350px;
+    margin-left: -350px;
+  }
+  .clockwise {
+    width: 550px;
+    height: 550px;
+    margin-top: -275px;
+    margin-left: -275px;
+  }
+  .credit p {
+    left: 2rem;
+    font-size: 16px;
+  }
+  .social {
+    position: fixed;
+    top: 50%;
+    margin-top: -128px;
+    right: 2rem;
+  }
+  .social li {
+    padding: 1rem;
+  }
+  .social i {
+    font-size: 2rem;
+  }
+  .credit p {
+    font-size: 16px;
+    left: 4rem;
+  }
+}

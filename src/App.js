@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import clock from "./assets/clock.svg";
+import clockwise from "./assets/clock.gif";
+import logo from "./assets/logo.webp";
+import BgVideo from "./components/bg-video";
+import SocialLinks from "./components/social-links";
+import Copyright from "./components/copyright";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+      <BgVideo />
+      <section className="clock">
+        <div className="text">
+          <h2 className="txt1">OUR NEW SITE IS</h2>
+          <h1>
+            COMING <br />
+            SOON
+          </h1>
+          <h2 className="txt2">STAY TUNED!</h2>
+        </div>
+        <a href="https://jrazap.com/">
+          <img className="logo" src={logo} alt="" />
         </a>
-      </header>
+        <img className="parts" src={clock} alt="" />
+        <img className="clockwise" src={clockwise} alt="" />
+        <SocialLinks />
+        <Copyright />
+      </section>
     </div>
   );
 }
