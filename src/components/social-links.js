@@ -28,7 +28,7 @@ const SocialLinks = () => {
         {links.map((item) => {
           return (
             <li key={item.title}>
-              <a href={item.url} target="_blank">
+              <a href={item.url} target="_blank" rel="noreferrer">
                 <i className={`fa ${item.icon}`}></i>
               </a>
             </li>
