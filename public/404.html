@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./logo.webp" />
+    <title>404 | Page Not Found</title>
+    <style>
+      :root {
+        --textColor: #fff;
+        --bgColor: rgb(23, 60, 88);
+        --font: "futura-lt-w01-light", sans-serif;
+        --btnBg: rgba(255, 255, 255, 0.2);
+        --black: #000;
+        --white: #fff;
+      }
+      body {
+        color: var(--textColor);
+        background-color: var(--bgColor);
+        font-family: var(--font);
+      }
+      .status {
+        min-block-size: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 1rem;
+      }
+      .btn {
+        display: block;
+        color: var(--white);
+        background-color: var(--btnBg);
+        border: 1px solid var(--white);
+        padding: 0.6rem 2.5rem;
+        margin-top: 1rem;
+        font-weight: 200;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .btn:hover {
+        color: var(--white);
+        background-color: rgb(23, 60, 88);
+        transition: all 0.2s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="status">
+      <div class="text">
+        <h1 class="code">404</h1>
+        <span>|</span>
+        <h2 class="message">Page Not Found</h2>
+      </div>
+      <a href="/" class="btn">Back To Home</a>
+    </div>
+  </body>
+</html>
