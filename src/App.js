@@ -17,7 +17,7 @@ function App() {
           </h1>
           <h2 className="txt2">STAY TUNED!</h2>
         </div>
-        <a href="https://jrazap.com/">
+        <a href="https://jrazap.com/" aria-label="jrazap-logo">
           <img className="logo" src={logo} alt="" />
         </a>
         <img className="parts" src={clock} alt="" />
